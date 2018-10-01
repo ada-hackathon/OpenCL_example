@@ -1,0 +1,179 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f0fb9272ff6, pid=30010, tid=0x00007f0fb9e72700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_112-b15) (build 1.8.0_112-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.112-b15 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x42ff6]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f0fb000b000):  JavaThread "main" [_thread_in_native, id=30012, stack(0x00007f0fb9d73000,0x00007f0fb9e73000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00106105b1bbd2c0, RBX=0x0000000000000001, RCX=0x00007f0fb93606d9, RDX=0x00007f0fb000007f
+RSP=0x00007f0fb9e70610, RBP=0x0000000000000001, RSI=0x0000000000000080, RDI=0x00007f0fb9620628
+R8 =0x00007f0fb961ca60, R9 =0x0000000000000000, R10=0x0000000000000022, R11=0x0000000000000206
+R12=0x00007f0fb961b718, R13=0x000000000000221b, R14=0x00007f0fb9620628, R15=0x00007f0fb1bbc2e0
+RIP=0x00007f0fb9272ff6, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007f0fb9e70610)
+0x00007f0fb9e70610:   00007f0fb9e70640 00000001521673f0
+0x00007f0fb9e70620:   00007f0fb06acad0 00007f0fb06acad0
+0x00007f0fb9e70630:   0000000000000000 000000007fffffff
+0x00007f0fb9e70640:   00007f0fb9e706d8 0000000000000000
+0x00007f0fb9e70650:   00007f0f8b68c020 00007f0fb927313a
+0x00007f0fb9e70660:   0000000000000000 00007f0f88e16968
+0x00007f0fb9e70670:   00007f0fb06acad0 00007f0f88e141ed
+0x00007f0fb9e70680:   00007f0fb06acad0 00007f0f88e05d3d
+0x00007f0fb9e70690:   00007f0fb9e70700 0000000000000000
+0x00007f0fb9e706a0:   00007f0fb06d5c90 00007f0f8b68c085
+0x00007f0fb9e706b0:   00007f0fb06d5d80 00007f0fb06d5d80
+0x00007f0fb9e706c0:   00007f0fb9e706e0 00007f0f8a6f9e51
+0x00007f0fb9e706d0:   00007f0fb91fec60 00007f0fb06d5c90
+0x00007f0fb9e706e0:   00007f0fb06d5d80 00007f0f00000001
+0x00007f0fb9e706f0:   00007f0fb06a5460 00007f0fb06d5c90
+0x00007f0fb9e70700:   00007f0d51cee700 f770c52857ce0f00
+0x00007f0fb9e70710:   00007f0fb06d5d80 00000006c08f05b0
+0x00007f0fb9e70720:   00007f0fb9e707a0 0000000000000000
+0x00007f0fb9e70730:   000000007fffffff 00007f0fb9e70790
+0x00007f0fb9e70740:   00007f0fb000b000 00007f0f70a7806c
+0x00007f0fb9e70750:   0000000000000003 00007f0fa270e944
+0x00007f0fb9e70760:   000000076c247e68 00000006c0a8b230
+0x00007f0fb9e70770:   00007f0f49160028 0000000000000000
+0x00007f0fb9e70780:   00000006c192e708 00000006c08f05c8
+0x00007f0fb9e70790:   00000006c08f05c8 0000000000000000
+0x00007f0fb9e707a0:   00000007c01c8d20 00007f0fa4e02380
+0x00007f0fb9e707b0:   0000000000000007 00007f0fb06d5d80
+0x00007f0fb9e707c0:   0000000000000000 00000006c0a8a800
+0x00007f0fb9e707d0:   00000007c01c8d20 0000000100000003
+0x00007f0fb9e707e0:   00007f0f7129be38 00000006c192df40
+0x00007f0fb9e707f0:   0000000000000011 0000000000000009
+0x00007f0fb9e70800:   0000000000000001 0000000000000286 
+
+Instructions: (pc=0x00007f0fb9272ff6)
+0x00007f0fb9272fd6:   49 8d 3e 48 81 ec 80 00 00 00 e8 db d6 0e 00 48
+0x00007f0fb9272fe6:   81 c4 80 00 00 00 48 89 d0 48 c1 e0 05 4c 01 f8
+0x00007f0fb9272ff6:   48 8b 50 10 48 83 fa 03 0f 85 3c ff ff ff 48 8b
+0x00007f0fb9273006:   40 18 48 c1 c8 11 64 48 33 04 25 30 00 00 00 ff 
+
+Register to memory mapping:
+
+RAX=0x00106105b1bbd2c0 is an unknown value
+RBX=0x0000000000000001 is an unknown value
+RCX=0x00007f0fb93606d9: <offset 0x1306d9> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f0fb9230000
+RDX=0x00007f0fb000007f is an unknown value
+RSP=0x00007f0fb9e70610 is pointing into the stack for thread: 0x00007f0fb000b000
+RBP=0x0000000000000001 is an unknown value
+RSI=0x0000000000000080 is an unknown value
+RDI=0x00007f0fb9620628: <offset 0x3f0628> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f0fb9230000
+R8 =0x00007f0fb961ca60: <offset 0x3eca60> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f0fb9230000
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000022 is an unknown value
+R11=0x0000000000000206 is an unknown value
+R12=0x00007f0fb961b718: <offset 0x3eb718> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f0fb9230000
+R13=0x000000000000221b is an unknown value
+R14=0x00007f0fb9620628: <offset 0x3f0628> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f0fb9230000
+R15=0x00007f0fb1bbc2e0 is an unknown value
+
+
+Stack: [0x00007f0fb9d73000,0x00007f0fb9e73000],  sp=0x00007f0fb9e70610,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x42ff6]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 12234  org.eclipse.swt.internal.gtk.OS._g_main_context_check(JIJI)I (0 bytes) @ 0x00007f0fa270e8ca [0x00007f0fa270e880+0x4a]
+J 20923 C2 org.eclipse.swt.widgets.Display.sleep()Z (395 bytes) @ 0x00007f0fa4e02380 [0x00007f0fa4e01300+0x1080]
+J 27139% C2 org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run()V (669 bytes) @ 0x00007f0fa2214188 [0x00007f0fa2213ee0+0x2a8]
+j  org.eclipse.core.databinding.observable.Realm.runWithDefault(Lorg/eclipse/core/databinding/observable/Realm;Ljava/lang/Runnable;)V+12
+j  org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(Lorg/eclipse/e4/ui/model/application/MApplicationElement;Lorg/eclipse/e4/core/contexts/IEclipseContext;)Ljava/lang/Object;+57
+j  org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(Lorg/eclipse/e4/ui/model/application/MApplicationElement;)V+20
+j  org.eclipse.ui.internal.Workbench$5.run()V+436
+j  org.eclipse.core.databinding.observable.Realm.runWithDefault(Lorg/eclipse/core/databinding/observable/Realm;Ljava/lang/Runnable;)V+12
+j  org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Lorg/eclipse/swt/widgets/Display;Lorg/eclipse/ui/application/WorkbenchAdvisor;)I+18
+j  org.eclipse.ui.PlatformUI.createAndRunWorkbench(Lorg/eclipse/swt/widgets/Display;Lorg/eclipse/ui/application/WorkbenchAdvisor;)I+2
+j  com.xilinx.sdsoc.app.SDSoCApplication.start(Lorg/eclipse/equinox/app/IApplicationContext;)Ljava/lang/Object;+105
+j  org.eclipse.equinox.internal.app.EclipseAppHandle.run(Ljava/lang/Object;)Ljava/lang/Object;+135
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(Ljava/lang/Object;)Ljava/lang/Object;+85
+j  org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(Ljava/lang/Object;)Ljava/lang/Object;+82
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run(Ljava/lang/Object;)Ljava/lang/Object;+105
+j  org.eclipse.core.runtime.adaptor.EclipseStarter.run([Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Object;+132
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.eclipse.equinox.launcher.Main.invokeFramework([Ljava/lang/String;[Ljava/net/URL;)V+265
+j  org.eclipse.equinox.launcher.Main.basicRun([Ljava/lang/String;)V+160
+j  org.eclipse.equinox.launcher.Main.run([Ljava/lang/String;)I+4
+j  org.eclipse.equinox.launcher.Main.main([Ljava/lang/String;)V+10
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f0dbc003000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=28551, stack(0x00007f0f3b8f9000,0x00007f0f3b9fa000)]
+  0x00007f0dbc002000 JavaThread "AWT-Shutdown" [_thread_blocked, id=28465, stack(0x00007f0f418f7000,0x00007f0f419f8000)]
+  0x00007f0c68003000 JavaThread "Worker-87" [_thread_blocked, id=3490, stack(0x00007f0f71bdc000,0x00007f0f71cdd000)]
+  0x00007f0c9c001800 JavaThread "Worker-85" [_thread_blocked, id=3488, stack(0x00007f0f39dde000,0x00007f0f39edf000)]
+  0x00007f0e04006800 JavaThread "Worker-84" [_thread_blocked, id=3487, stack(0x00007f0f3a8e9000,0x00007f0f3a9ea000)]
+  0x00007f0de40b5000 JavaThread "TCF Console Input" [_thread_blocked, id=20588, stack(0x00007f0f39adb000,0x00007f0f39bdc000)]
+  0x00007f0d526d2800 JavaThread "org.eclipse.cdt.internal.ui.text.CReconciler" daemon [_thread_blocked, id=33660, stack(0x00007f0f72ced000,0x00007f0f72dee000)]
+  0x00007f0c74005800 JavaThread "Worker-79" [_thread_blocked, id=29962, stack(0x00007f0f39bdc000,0x00007f0f39cdd000)]
+  0x00007f0ce0001000 JavaThread "Worker-48" [_thread_blocked, id=18055, stack(0x00007f0f3bafb000,0x00007f0f3bbfc000)]
+  0x00007f0dd4192800 JavaThread "Worker-10" [_thread_blocked, id=7535, stack(0x00007f0f73afb000,0x00007f0f73bfc000)]
+  0x00007f0d6c00b800 JavaThread "[ThreadPool Manager] - Idle Thread" daemon [_thread_blocked, id=33195, stack(0x00007f0f784f6000,0x00007f0f785f7000)]
+  0x00007f0de03f9000 JavaThread "DLTK indexing" daemon [_thread_blocked, id=32349, stack(0x00007f0f8027b000,0x00007f0f8037c000)]
+  0x00007f0de4014000 JavaThread "TCF Channel Transmitter" daemon [_thread_blocked, id=32344, stack(0x00007f0f71fe0000,0x00007f0f720e1000)]
+  0x00007f0de4013000 JavaThread "TCF Channel Receiver" daemon [_thread_in_native, id=32343, stack(0x00007f0f785f7000,0x00007f0f786f8000)]
+  0x00007f0dac032000 JavaThread "Process monitor" daemon [_thread_blocked, id=32134, stack(0x00007f0f731f2000,0x00007f0f732f3000)]
+  0x00007f0dac030000 JavaThread "Input Stream Monitor" daemon [_thread_blocked, id=32132, stack(0x00007f0f786f8000,0x00007f0f787f9000)]
+  0x00007f0dac02f000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=32131, stack(0x00007f0f739fa000,0x00007f0f73afb000)]
+  0x00007f0dac02e000 JavaThread "Output Stream Monitor" daemon [_thread_in_native, id=32130, stack(0x00007f0f71edf000,0x00007f0f71fe0000)]
+  0x00007f0dac01e000 JavaThread "process reaper" daemon [_thread_blocked, id=32127, stack(0x00007f0f7809d000,0x00007f0f780d6000)]
+  0x00007f0de4011800 JavaThread "TCF Locator DNS Lookup" daemon [_thread_blocked, id=32122, stack(0x00007f0f783f5000,0x00007f0f784f6000)]
+  0x00007f0de4010800 JavaThread "TCF Locator Timer" daemon [_thread_blocked, id=32121, stack(0x00007f0f72ff0000,0x00007f0f730f1000)]
+  0x00007f0de4010000 JavaThread "TCF Locator Receiver" daemon [_thread_in_native, id=32120, stack(0x00007f0f8017a000,0x00007f0f8027b000)]
+  0x00007f0d80008000 JavaThread "TCF Event Dispatcher" daemon [_thread_blocked, id=32115, stack(0x00007f0f723e4000,0x00007f0f724e5000)]
+  0x00007f0de0422000 JavaThread "TCF Timer Dispatcher" daemon [_thread_blocked, id=32114, stack(0x00007f0f72bec000,0x00007f0f72ced000)]
+  0x00007f0e30015800 JavaThread "SyntheticaCleanerThread" daemon [_thread_blocked, id=32075, stack(0x00007f0f78afc000,0x00007f0f78bfd000)]
+  0x00007f0de035e000 JavaThread "TimerQueue" daemon [_thread_blocked, id=32029, stack(0x00007f0f730f1000,0x00007f0f731f2000)]
+  0x00007f0de0222800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=31939, stack(0x00007f0f732f3000,0x00007f0f733f4000)]
+  0x00007f0de0214000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=31935, stack(0x00007f0f782f4000,0x00007f0f783f5000)]
+  0x00007f0fb1bf6800 JavaThread "EventAdmin Async Event Dispatcher Thread" daemon [_thread_blocked, id=31740, stack(0x00007f0f73bfc000,0x00007f0f73cfd000)]
+  0x00007f0fb1643800 JavaThread "Java indexing" daemon [_thread_blocked, id=31621, stack(0x00007f0f725e6000,0x00007f0f726e7000)]
+  0x00007f0fb0918800 JavaThread "EMF Reference Cleaner" daemon [_thread_blocked, id=31480, stack(0x00007f0f720e1000,0x00007f0f721e2000)]
+  0x00007f0d78293800 JavaThread "Worker-JM" [_thread_blocked, id=30327, stack(0x00007f0f71480000,0x00007f0f71581000)]
+  0x00007f0d7864f000 JavaThread "Bundle File Closer" daemon [_thread_blocked, id=30283, stack(0x00007f0f71581000,0x00007f0f71682000)]
+  0x00007f0d78007800 JavaThread "[Timer] - Main Queue Handler" daemon [_thread_blocked, id=30255, stack(0x00007f0f71adb000,0x00007f0f71bdc000)]
+  0x00007f0fb0d41000 JavaThread "Start Level: Equinox Container: 3022c344-73c5-0018-195a-dd24b32a8f7f" daemon [_thread_blocked, id=30248, stack(0x00007f0f71cdd000,0x00007f0f71dde000)]
+  0x00007f0e3800a800 JavaThread "Framework Event Dispatcher: org.eclipse.osgi.internal.framework.EquinoxEventPublisher@10b1a751" daemon [_thread_blocked, id=30246, stack(0x00007f0f71dde000,0x00007f0f71edf000)]
+  0x00007f0fb0d28800 JavaThread "Refresh Thread: Equinox Container: 3022c344-73c5-0018-195a-dd24b32a8f7f" daemon [_thread_blocked, id=30135, stack(0x00007f0f78cfe000,0x00007f0f78dff000)]
+  0x00007f0fb0b40800 JavaThread "Active Thread: Equinox Container: 3022c344-73c5-0018-195a-dd24b32a8f7f" [_thread_blocked, id=30122, stack(0x00007f0f80079000,0x00007f0f8017a000)]
+  0x00007f0fb058d000 JavaThread "Service Thread" daemon [_thread_blocked, id=30070, stack(0x00007f0f8bbfc000,0x00007f0f8bcfd000)]
+  0x00007f0fb0582000 JavaThread "C1 CompilerThread14" daemon [_thread_blocked, id=30069, stack(0x00007f0f8bcfe000,0x00007f0f8bdfe000)]
+  0x00007f0fb0580000 JavaThread "C1 CompilerThread13" daemon [_thread_blocked, id=30068, stack(0x00007f0f8bdff000,0x00007f0f8beff000)]
+  0x00007f0fb057e000 JavaThread "C1 CompilerThread12" daemon [_thread_blocked, id=30067, stack(0x00007f0f8bf00000,0x00007f0f8c000000)]
+  0x00007f0fb057c000 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=30066, stack(0x00007f0f90028000,0x00007f0f90128000)]
+  0x00007f0fb0579800 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=30065, stack(0x00007f0f90129000,0x00007f0f90229000)]
+  0x00007f0fb0577800 JavaThread "C2 CompilerThread9" daemon [_thread_blocked, id=30064, stack(0x00007f0f9022a000,0x00007f0f9032a000)]
+  0x00007f0fb0575800 JavaThread "C2 CompilerThread8" daemon [_thread_blocked, id=30063, stack(0x00007f0f9032b000,0x00007f0f9042b000)]
+  0x00007f0fb0573800 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=30062, stack(0x00007f0f9042c000,0x00007f0f9052c000)]
+  0x00007f0fb0571800 JavaThread "C2 CompilerThread6" daemon [_thread_blocked, id=30061, stack(0x00007f0f9052d000,0x00007f0f9062d000)]
+  0x00007f0fb056f800 JavaThread "C2 CompilerThread5" daemon [_thread_blocked, id=30060, stack(0x00007f0f9062e000,0x00007f0f9072e000)]
+  0x00007f0fb0565800 JavaThread "C2 CompilerThread4" daemon [_thread_blocked, id=30059, stack(0x00007f0f9072f000,0x00007f0f9082f000)]
+  0x00007f0fb0563000 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=30058, stack(0x00007f0f90830000,0x00007f0f90930000)]
+  0x00007f0fb0561000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=30057
