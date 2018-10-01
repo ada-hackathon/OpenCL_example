@@ -79,7 +79,7 @@ int main(int argc, char** argv)
     cl::Program::Binaries bins = xcl::import_binary_file(binaryFile);
     devices.resize(1);
     cl::Program program(context, devices, bins);
-    cl::Kernel krnl_adder(program,"mult");
+    cl::Kernel krnl_mult(program,"mult");
 
     //Allocate Buffer in Global Memory
     cl::Buffer buffer_input1 (context, CL_MEM_READ_ONLY,
@@ -98,14 +98,13 @@ int main(int argc, char** argv)
     int cols = COLS;
     //Set the Kernel Arguments
     int narg=0;
-    krnl_adder.setArg(narg++,buffer_input1);
-    krnl_adder.setArg(narg++,buffer_input2);
-    krnl_adder.setArg(narg++,buffer_output);
-    krnl_adder.setArg(narg++,cols);
+    krnl_mult.setArg(narg++,buffer_input1);
+    krnl_mult.setArg(narg++,buffer_input2);
+    krnl_mult.setArg(narg++,buffer_output);
+    krnl_mult.setArg(narg++,cols);
 
     //Launch the Kernel
-   // q.enqueueTask(krnl_adder);
-    q.enqueueNDRangeKernel(krnl_adder,cl::NullRange,cl::NDRange(cols,size/cols),cl::NullRange);
+    q.enqueueNDRangeKernel(krnl_mult,cl::NullRange,cl::NDRange(cols,size/cols),cl::NullRange);
 
     //Copy Result from Device Global Memory to Host Local Memory
     q.enqueueReadBuffer(buffer_output, CL_TRUE, 0, vector_size_bytes, source_hw_results.data());
